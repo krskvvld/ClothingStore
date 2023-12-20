@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/game_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/game_back_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/ic_back"
+            android:clickable="true"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/game_title_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:textSize="20sp"
+            tools:text="Jacket" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/game_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_app_bar"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <FrameLayout
+        android:id="@+id/game_price_frame"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/game_price_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_image">
+
+        <TextView
+            android:id="@+id/game_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="1100 ₽" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/game_tags_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/hint"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_price_frame"
+        tools:text="Cloth" />
+
+    <TextView
+        android:id="@+id/game_date_title_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="@string/game_date"
+        android:textColor="@color/hint"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_tags_text" />
+
+    <TextView
+        android:id="@+id/game_date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/game_date_title_text"
+        app:layout_constraintStart_toEndOf="@id/game_date_title_text"
+        app:layout_constraintTop_toTopOf="@id/game_date_title_text"
+        tools:text="2012-08-21" />
+
+    <TextView
+        android:id="@+id/game_developer_title_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="@string/game_developer"
+        android:textColor="@color/hint"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_date_title_text" />
+
+    <TextView
+        android:id="@+id/game_developer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="start"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/game_developer_title_text"
+        app:layout_constraintStart_toEndOf="@id/game_developer_title_text"
+        app:layout_constraintTop_toTopOf="@id/game_developer_title_text"
+        tools:text="Gucci" />
+
+    <TextView
+        android:id="@+id/game_publisher_title_text"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/game_publisher"
+        android:textColor="@color/hint"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_developer_title_text" />
+
+    <TextView
+        android:id="@+id/game_publisher_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/game_publisher_title_text"
+        app:layout_constraintStart_toEndOf="@id/game_publisher_title_text"
+        app:layout_constraintTop_toTopOf="@id/game_publisher_title_text"
+        tools:text="Gucci" />
+
+    <TextView
+        android:id="@+id/game_description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_publisher_title_text"
+        tools:text="Description" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/game_cart_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shapeAppearanceOverlay="@style/FabShapeOverlay"
+        android:backgroundTint="@color/secondary_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_cart_add"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        android:contentDescription="@string/game_cart_add_description"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Clothing store</string>
+    <string name="price">%1$.0f ₽</string>
+    <string name="cart_title">Cart</string>
+    <string name="cart_buy_success">Order is processed</string>
+    <string name="profile_title">Profile</string>
+    <string name="profile_group">Profile description</string>
+    <string name="game_cart_add_description">Add to Basket</string>
+    <string name="cart_buy">Buy</string>
+    <string name="profile_footer">ULGU</string>
+    <string name="game_date">Release date</string>
+    <string name="game_developer">Designer</string>
+    <string name="game_publisher">Publisher</string>
+</resources>
